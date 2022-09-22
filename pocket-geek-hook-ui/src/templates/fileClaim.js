@@ -1,12 +1,12 @@
+import React from 'react';
 import {
     Typography, Divider, FormControl, FormLabel, RadioGroup, FormControlLabel, Radio,
-    Select, InputLabel, MenuItem, TextField, Grid, Box, Paper
+    Select, InputLabel, MenuItem, TextField, Grid
 } from '@mui/material';
 import { Container } from '@mui/system';
-import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
-import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
-import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import React from 'react';
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import DatePicker from "@mui/lab/DatePicker";
 
 export default function FileClaim() {
     const [age, setAge] = React.useState('');
@@ -92,7 +92,7 @@ export default function FileClaim() {
                 <TextField id="price" label="Purchase Price $" variant="outlined" />
             </Grid>
             <Grid item xs={12}>
-                <LocalizationProvider dateAdapter={AdapterDayjs}>
+                <LocalizationProvider dateAdapter={AdapterDateFns}>
                     <DatePicker
                         label="Basic example"
                         value={value}
