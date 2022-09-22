@@ -10,7 +10,13 @@ import AssurantLogo from '../../src/assets/assurant-footer-logo.png'
 import SSLLogo from '../../src/assets/ssl-logo.jpeg'
 import PCILogo from '../../src/assets/pci-logo.jpeg'
 
-
+function Copyright(props) {
+    return (
+        <Typography variant="body2" align="center" {...props}>
+            {'© 2022 assurant inc. all right reversed'}
+        </Typography>
+    );
+}
 
 export default function BottomAppBar() {
     return (
@@ -29,16 +35,15 @@ export default function BottomAppBar() {
                     </IconButton>
                 </Toolbar>
                 <Toolbar>
-                    <Typography>@ 2022 assurant inc. all right reversed</Typography>
+                    <Copyright sx={{mb: 4 }} />
                     <Box sx={{ flexGrow: 1 }} />
-
-                    <Link href="#" color="inherit" style={{ margin: 5 }}>
+                    <Link href="#" variant="body2" color="inherit" style={{ margin: 5 }}>
                         {'Support Details'}
                     </Link>
-                    <Link href="#" color="inherit" style={{ margin: 5 }}>
+                    <Link href="#" variant="body2" color="inherit" style={{ margin: 5 }}>
                         {'Privacy Policy'}
                     </Link>
-                    <Link href="#" color="inherit" style={{ margin: 5 }}>
+                    <Link href="#" variant="body2" color="inherit" style={{ margin: 5 }}>
                         {'Terms of service'}
                     </Link>
 
